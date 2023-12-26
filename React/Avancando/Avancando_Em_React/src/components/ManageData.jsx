@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 function ManageData() {
-    const [number, setNumber] = useState(15);
+    const [number, setNumber] = useState(10);
     const[lista] = useState(["Pedro", "Maria", "João"]);
     
   return (
