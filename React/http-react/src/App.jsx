@@ -6,6 +6,9 @@ function App() {
 
   const [products, setProducts] = useState([]);
 
+  const [name, setNome] = useState("");
+  const [price, setPreco] = useState("");
+
   const url = "http://localhost:3000/products";
 
   useEffect(() => {
@@ -23,7 +26,21 @@ function App() {
 
   }, [])
 
-  console.log(products);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const product = {
+      name,
+      price,
+    }
+
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(product)
+    })
+
+  }
 
   return (
     <>
@@ -36,6 +53,21 @@ function App() {
           ))}
         </ul>
 
+            <form onSubmit={handleSubmit}>
+
+              <label>
+                Nome:
+                <input type="text" name="nome" value={name} onChange={(e) => setNome(e.target.value)}/>
+              </label>
+
+              <label>
+                Preco:
+                <input type="number" name="preco" value={price} onChange={(e) => setPreco(e.target.value)}/>
+              </label>
+
+              <input type="submit" value="Enviar" />
+
+            </form>
       </div>
     </>
   )
