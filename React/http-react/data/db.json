@@ -34,6 +34,66 @@
       "id": "17cf",
       "name": "Camisa",
       "price": "300"
+    },
+    {
+      "id": "a9a0",
+      "name": "Teclado",
+      "price": "110"
+    },
+    {
+      "id": "638d",
+      "name": "Mouse",
+      "price": "40"
+    },
+    {
+      "id": "e78e",
+      "name": "Mouse",
+      "price": "40"
+    },
+    {
+      "id": "247b",
+      "name": "Som",
+      "price": "30"
+    },
+    {
+      "id": "353b",
+      "name": "Microfone",
+      "price": "50"
+    },
+    {
+      "id": "7966",
+      "name": "Monitor",
+      "price": "200"
+    },
+    {
+      "id": "fe0d",
+      "name": "Monitor",
+      "price": "300"
+    },
+    {
+      "id": "c6e6",
+      "name": "Monitor",
+      "price": "300"
+    },
+    {
+      "id": "dd02",
+      "name": "Cadeira",
+      "price": "500"
+    },
+    {
+      "id": "aa27",
+      "name": "Fone",
+      "price": "129"
+    },
+    {
+      "id": "fd81",
+      "name": "teste",
+      "price": "123"
+    },
+    {
+      "id": "1b7a",
+      "name": "teste",
+      "price": "111"
     }
   ]
 }
