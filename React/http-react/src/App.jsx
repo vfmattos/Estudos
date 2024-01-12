@@ -9,7 +9,7 @@ function App() {
 
   const [products, setProducts] = useState([]);
 
-  const {data: items} = useFetch(url);
+  const {data: items, httpConfig} = useFetch(url);
 
   const [name, setNome] = useState("");
   const [price, setPreco] = useState("");
@@ -32,6 +32,7 @@ function App() {
   }, [])
   */
 
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -39,6 +40,10 @@ function App() {
       name,
       price,
     }
+    /*
+    
+
+  
 
     const res = await fetch(url, {
       method: 'POST',
@@ -50,10 +55,15 @@ function App() {
 
     setProducts((prevProduct) => [...prevProduct, addedProduct]);
 
-    setNome("");
-    setPreco("");
+*/
+
+httpConfig(product, "POST");
+setNome("");
+setPreco("");
 
   }
+  
+
 
   return (
     <>

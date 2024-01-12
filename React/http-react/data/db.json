@@ -94,6 +94,16 @@
       "id": "1b7a",
       "name": "teste",
       "price": "111"
+    },
+    {
+      "id": "5bb9",
+      "name": "Tenis",
+      "price": "800"
+    },
+    {
+      "id": "0db8",
+      "name": "Óculos",
+      "price": "40"
     }
   ]
 }
