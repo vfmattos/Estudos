@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #container {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+        }
+
+        #interno{
+            width: 19%;
+        }
+
+        h1 {
+            color: yellow !important;
+            text-align: center;
+            text-decoration: line-through;
+            text-shadow: 8px 6px 3px red !important;
+
+        }
+
+        #quote {
+            color: white;
+            text-align: left;
+            text-decoration: underline #FF4500;
+        }
+
+        #author {
+            color: blue;
+            text-align: right;
+            text-decoration: overline #FF4500;
+        }
+
+        #container2{
+            display: flex;
+            flex-direction: row;
+            column-gap: 20px;
+            justify-content: center;
+            margin-top:100px;
+        }
+
+        #container2 div{
+            background-color: white;
+            color:black !important;
+            border:1px solid black !important;
+            height: 200px;
+            width: 35%;
+            padding: 20px;
+        }
+
+        #textoDefault p{
+            text-align: default;
+            text-decoration: dotted underline #2A9D8F;
+            text-transform: uppercase;
+        }
+
+        #textoJustificado p{
+            text-align: justify;
+            text-decoration: wavy overline #2A9D8F;
+            text-transform: capitalize; 
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="interno">
+            <h1>Quote of the day</h1>
+            <p id="quote">"Learning is a lifelong process"</p>
+            <p id="author">-Peter Druken</p>
+        </div>
+    </div>
+
+    <div id="container2">
+        <div id="textoDefault"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae laborum eum nobis ullam quis, a rem doloremque tenetur sunt totam similique consequuntur, tempora debitis facilis quos? Animi repudiandae fuga blanditiis.</p></div>
+        <div id="textoJustificado"><p>ipsum dolor sit amet, consectetur adipisicing elit. Nam, autem. Officia quos aperiam impedit error provident deserunt cupiditate asperiores delectus perferendis nobis beatae facere, eligendi nulla id similique saepe est.</p></div>
+    </div>
+
+</body>
+
+</html>

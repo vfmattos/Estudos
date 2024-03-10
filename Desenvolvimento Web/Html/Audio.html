@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    
+    <!--Quando diferentes opções de <source> são incluídas, o navegador escolherá a primeira que ele suporta.-->
+
+    <!--Você pode adicionar texto entre as tags <audio>.
+         O texto só será exibido em navegadores que não suportam o elemento de áudio.-->
+
+    <!--Você pode exibir play/pause, volume e outros controles de áudio com o atributo controls .-->
+
+<body>
+    <audio controls>
+        <source src="audiofile.mp3" type="audio/mpeg">
+        <source src="audiofile.ogg" type="audio/ogg">
+        Audio not supported
+    </audio>
+
+    <!--Você pode usar os atributos autoplay, muted e loop para controlar o comportamento do elemento multimídia. 
+        Assim como controls, esses atributos têm seus valores padrão omitidos.-->
+
+    <video autoplay muted>
+        <source src="videofile.mp4" type="video/mp4">
+        <source src="videofile.ogg" type="video/ogg">
+    </video>
+</body>
+
+</html>
