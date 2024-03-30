@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="form-container">
+        <!--  EVENT INFO  -->
+        <div class="info">
+          <p>Grab your free pass</p>
+          <h1>Join the Testing Event of the Year</h1>
+          <p>Fill in the details to stay updated!</p>
+        </div>
+      
+        <!--  FORM  -->
+        <form class="form" id="form">
+          <div class="col text-input">
+            <!-- NAME -->
+            <div>
+              <label for="name">Full Name*</label>
+              <input type="text" class="input" id="name" required />
+            </div>
+      
+            <!-- EMAIL -->
+            <div>
+              <label for="email">Email*</label>
+              <input type="email" class="input" id="email" required />
+            </div>
+          </div>
+      
+          <div class="col range-select">
+            <!-- AGE GROUP -->
+            <div class="range-container">
+              <label for="inputAge">Age</label>
+              <input type="range" id="inputAge" min="12" max="60" value="24" />
+              <span class="range-value">24</span>
+            </div>
+      
+            <!-- DESIGNATION -->
+            <div class="select-container">
+              <label for="basic-select">Job</label>
+              <div class="select">
+                <select class="basic-select">
+                  <option value="select">Select</option>
+                  <option value="designer">Designer</option>
+                  <option value="developer">Developer</option>
+                  <option value="tester">Tester</option>
+                  <option value="manager">Manager</option>
+                  <option value="other">Other</option>
+                </select>
+                <span class="focus"></span>
+              </div>
+            </div>
+          </div>
+      
+          <!-- GOT TO KNOW? -->
+          <div class="radio-container">
+            <fieldset>
+              <legend>How did you get to know about this event?</legend>
+      
+              <div class="radio">
+                <input type="radio" class="input" id="radioTwitter" name="social" />
+                <label for="radioTwitter">Twitter</label>
+              </div>
+      
+              <div class="radio">
+                <input type="radio" class="input" id="radioLinkedIn" name="social" />
+                <label for="radioLinkedIn">LinkedIn</label>
+              </div>
+      
+              <div class="radio">
+                <input type="radio" class="input" id="radioBlog" name="social" checked />
+                <label for="radioBlog">Blog</label>
+              </div>
+      
+              <div class="radio">
+                <input type="radio" class="input" id="radioWebsite" name="social" />
+                <label for="radioWebsite">Website</label>
+              </div>
+            </fieldset>
+          </div>
+      
+          <!-- MESSAGE -->
+          <div class="textarea-container">
+            <label for="inputMessage">Message</label>
+            <textarea class="input" id="inputMessage" cols="30" rows="5" placeholder="Enter your message here..."></textarea>
+          </div>
+      
+          <!-- CHECKBOX AND TERMS -->
+          <div class="checkbox-container">
+            <input type="checkbox" class="input" id="inputCheckbox" />
+            <label for="inputCheckbox">
+              By clicking Register you accept the LambdaTest
+              <a href="https://www.lambdatest.com/legal/terms-of-service">Terms of Service</a>
+              and acknowledge the
+              <a href="https://www.lambdatest.com/legal/privacy">Privacy Policy</a>
+              and
+              <a href="https://www.lambdatest.com/legal/cookie">Cookie Policy </a>
+            </label>
+          </div>
+      
+          <div class="buttons">
+            <button type="submit" id="subbtn">
+              Register for Free
+              <img width="15" src="https://www.lambdatest.com/resources/images/testu/testmu_arr.svg" alt="arrow" />
+            </button>
+      
+            <button type="reset" id="rstbtn">Clear Form</button>
+          </div>
+        </form>
+      </main>
+</body>
+</html>

@@ -1,0 +1,445 @@
+:root {
+    --color-primary: hsl(210, 5%, 8%);
+    --color-secondary: hsl(220, 13%, 14%);
+    --color-text: hsl(0, 0%, 93%);
+    --color-accent: hsl(292, 61%, 44%);
+    --input-border: hsl(0, 0%, 46%);
+    --input-border-focus: hsl(0, 0%, 80%);
+    --gradient-1: linear-gradient(
+      90.11deg,
+      hsl(351, 68%, 66%) 0.04%,
+      hsl(256, 98%, 66%) 98.71%
+    );
+    --gradient-2: linear-gradient(90deg, hsl(10, 66%, 66%), hsl(292, 61%, 44%));
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    display: flex;
+    place-items: center;
+    font-size: 16px;
+    background-color: var(--color-primary);
+  }
+  
+  .form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 6rem;
+  
+    border: 1px solid var(--input-border);
+    border-radius: 10px;
+    background: var(--color-secondary);
+    position: relative;
+  }
+  
+  /* INFO SECTION */
+  .info {
+    margin: 2rem 0 0 2rem;
+    color: var(--color-text);
+  }
+  
+  .info p:first-child {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: var(--gradient-1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .info::before {
+    content: "";
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url("https://www.lambdatest.com/resources/images/testu/testuicon.svg")
+      no-repeat;
+    background-size: contain;
+  }
+  
+  .info h1 {
+    font-size: 52px;
+    margin-bottom: 1.2rem;
+  }
+  
+  .info p:last-child {
+    font-size: 2rem;
+  }
+  
+  /* RESETTING THE DEFAULT STYLES */
+  input,
+  select,
+  textarea,
+  fieldset,
+  legend,
+  button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+  }
+  
+  /* FOR LABEL AND LEGEND TEXT COLOR */
+  label,
+  legend,
+  .range-value {
+    color: var(--input-border);
+  }
+  
+  /* FOR STRUCTURE */
+  .col.text-input {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  
+  .col > div {
+    width: 100%;
+  }
+  
+  .form > div:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  
+  .col.text-input > div > label,
+  .textarea-container > label {
+    margin-bottom: 0.5rem;
+  }
+  
+  .col.range-select,
+  .range-container,
+  .select-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  /* LABEL - BLOCK */
+  form > div > label,
+  form > div > div > label {
+    display: block;
+    font-size: 1.4rem;
+  }
+  
+  /* FOR RADIO INPUT STRUCTURE */
+  fieldset {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem 3rem;
+  }
+  
+  fieldset > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  /* CUSTOMIZING THE INPUT AND TEXTAREA FIELDS */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 0.45em 0.8em;
+    background-color: hsl(220, 13%, 18%);
+    color: var(--color-text);
+    border: 2px solid var(--input-border);
+    border-radius: 4px;
+  }
+  
+  textarea {
+    min-height: 110px;
+    resize: none;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    border-color: var(--input-border-focus);
+    box-shadow: 0 0 0 2px var(--color-accent);
+    outline: 3px solid transparent;
+  }
+  
+  /* FOR RADIO INPUTS */
+  input[type="radio"] {
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid var(--input-border);
+    border-radius: 50%;
+  
+    display: grid;
+    place-content: center;
+  }
+  
+  input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--color-accent);
+  
+    /* Windows High Contrast Mode */
+    background-color: CanvasText;
+  }
+  
+  input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+  
+  /* focused state styles */
+  input[type="radio"]:focus {
+    border-color: var(--input-border-focus);
+    box-shadow: 0 0 0 2px var(--color-accent);
+    outline: 3px solid transparent;
+  }
+  
+  .radio > label {
+    cursor: pointer;
+  }
+  
+  /* FOR CHECKBOX */
+  .checkbox-container {
+    display: grid;
+    grid-template-columns: 15px 1fr;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  input[type="checkbox"] {
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 2px solid var(--input-border);
+    border-radius: 0.15em;
+  
+    display: grid;
+    place-content: center;
+  }
+  
+  input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--color-accent);
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  }
+  
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+  
+  /* FOR FOCUS STATE */
+  input[type="checkbox"]:focus {
+    border-color: var(--input-border-focus);
+    box-shadow: 0 0 0 2px var(--color-accent);
+    outline: 3px solid transparent;
+  }
+  
+  /* FOR LABEL LINKS */
+  label > a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  /* FOR RANGE SLIDER INPUT */
+  input[type="range"] {
+    --line-thickness: 4px; /* line thickness*/
+    --height: 30px; /* thumb height */
+    --width: 15px; /* thumb width */
+  
+    width: 100%;
+    height: var(--height);
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  /* For Chrome, Edge, Safari and Opera Browsers */
+  input[type="range" i]::-webkit-slider-thumb {
+    width: var(--width);
+    height: var(--height);
+    background: var(--color-accent);
+    /* border-image-source: linear-gradient(
+      90deg,
+      var(--color-accent) 50%,
+      #ababab 0
+    );
+    border-image-slice: 1;
+    border-image-width: 0 100vw;
+    border-image-outset: 100vw; */
+    border-image: linear-gradient(
+        90deg,
+        var(--color-accent) 50%,
+        var(--input-border) 0
+      )
+      1/0 100vw/0 100vw;
+    box-shadow: 0 0 0 var(--line-thickness) inset var(--color-accent);
+    clip-path: polygon(
+      0 calc(50% + var(--line-thickness) / 2),
+      -100vw calc(50% + var(--line-thickness) / 2),
+      -100vw calc(50% - var(--line-thickness) / 2),
+      0 calc(50% - var(--line-thickness) / 2),
+      0 0,
+      100% 0,
+      100% calc(50% - var(--line-thickness) / 2),
+      100vw calc(50% - var(--line-thickness) / 2),
+      100vw calc(50% + var(--line-thickness) / 2),
+      100% calc(50% + var(--line-thickness) / 2),
+      100% 100%,
+      0 100%
+    );
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  
+  /* For Firefox */
+  input[type="range"]::-moz-range-thumb {
+    height: var(--height);
+    width: var(--width);
+    background: var(--color-accent);
+    border-image: linear-gradient(
+        90deg,
+        var(--color-accent) 50%,
+        var(--input-border) 0
+      )
+      1/0 100vw/0 100vw;
+    box-shadow: 0 0 0 var(--line-thickness) inset var(--color-accent);
+    clip-path: polygon(
+      0 calc(50% + var(--line-thickness) / 2),
+      -100vw calc(50% + var(--line-thickness) / 2),
+      -100vw calc(50% - var(--line-thickness) / 2),
+      0 calc(50% - var(--line-thickness) / 2),
+      0 0,
+      100% 0,
+      100% calc(50% - var(--line-thickness) / 2),
+      100vw calc(50% - var(--line-thickness) / 2),
+      100vw calc(50% + var(--line-thickness) / 2),
+      100% calc(50% + var(--line-thickness) / 2),
+      100% 100%,
+      0 100%
+    );
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  /* FOR SELECT ELEMENT */
+  select {
+    /* resets for further consistency */
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    cursor: inherit;
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 0.25em 0.5em;
+  }
+  
+  .select {
+    width: 100%;
+    border: 1px solid var(--input-border);
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: var(--color-text);
+    background-image: linear-gradient(to top, var(--color-text), #fff 33%);
+    position: relative;
+  
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+  }
+  
+  /* select arrow */
+  .select::after {
+    content: "";
+    width: 0.9em;
+    height: 0.7em;
+    background-color: var(--color-accent);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  }
+  
+  select,
+  .select::after {
+    grid-area: select;
+    justify-self: end;
+  }
+  
+  select:focus + .focus {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 2px solid var(--color-accent);
+    border-radius: inherit;
+  }
+  
+  /* FOR BUTTONS */
+  button[type="submit"],
+  button[type="reset"] {
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    padding: 0;
+  
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  
+  /* STYLING BUTTONS */
+  .buttons {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  button[type="submit"] {
+    background: var(--gradient-2);
+    color: var(--color-text);
+    padding: 14px;
+    border-radius: 5px;
+  }
+  
+  button[type="reset"] {
+    border-bottom: 3px solid var(--color-text);
+    color: var(--color-text);
+  }
+  
+  button > img {
+    filter: brightness(0) invert(1);
+  }
